@@ -24,6 +24,9 @@ def add_signatures_from_file(file, sigs={}):
 
             m = re.search(r'\((.*)\)', f)
 
+            if m is None:
+                continue
+
             _args = m.group(1).split(",")
 
             types = []
